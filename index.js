@@ -36,6 +36,7 @@ export default (content) => {
   const cityAverages = _.mapValues(cityTemps, cityRecords => 
     _.meanBy(cityRecords, 'maxTemp')
   );
+  
   const hottestCityEntry = _.maxBy(
     Object.entries(cityAverages),
     ([city, avgTemp]) => avgTemp
